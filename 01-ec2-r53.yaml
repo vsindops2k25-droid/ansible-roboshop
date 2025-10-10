@@ -5,7 +5,7 @@
     ami_id: "ami-09c813fb71547fc4f"
     sg_id: "sg-03c66e7a90fbbb324"
     zone_id: "Z05097823TWRPZG8NY41Q"
-    domain_name: "dops.fun"
+    domain_name: "dops1.fun"
     instances:
       - mongodb
       #- redis
