@@ -54,7 +54,7 @@
 
   - name: install mongodb client
     ansible.builtin.package:
-      name: mongodb-org-shell
+      name: mongodb-monosh
       state: present
 
   - name: connect to monodb catalogue
