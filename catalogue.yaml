@@ -61,7 +61,7 @@
   #   register: catalogue_output
   
   - name: evaluate catalogue db
-    community.mongodb.mongodb.shell:
+    community.mongodb.mongodb_shell:
       eval: "db.getMongo().getDBNames().indexOf('catalogue')"
 
   - name: print catalogue output
