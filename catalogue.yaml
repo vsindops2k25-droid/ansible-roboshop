@@ -51,10 +51,9 @@
       src: mongo.repo
       dest: /etc/yum.repos.d/mongodb.repo
       
-
   - name: install mongodb client
     ansible.builtin.package:
-      name: mongodb-monosh
+      name: mongodb-mongosh
       state: present
 
   - name: connect to monodb catalogue
