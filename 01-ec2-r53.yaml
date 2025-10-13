@@ -5,7 +5,7 @@
     ami_id: "ami-09c813fb71547fc4f"
     sg_id: "sg-03c66e7a90fbbb324"
     zone_id: "Z05097823TWRPZG8NY41Q"
-    domain_name: "dops1.fun"
+    domain_name: "dops.fun"
     instances:
       - mongodb
       #- redis
@@ -38,7 +38,7 @@
   - name: create r53 record
     amazon.aws.route53:
       state: present
-      zone: "{{ domain_name }}"
+      zone: "{{ zone_id }}"
       record: "{{ item.item }}.{{ domain_name }}"
       type: A
       ttl: 1
