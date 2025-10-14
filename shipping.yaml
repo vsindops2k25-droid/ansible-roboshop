@@ -12,7 +12,7 @@
 
     - name: install mysql python libraries
       ansible.builtin.pip:
-        executable: pip3
+        executable: pip3.9
         name: "{{ item }}"
       loop:
         - cryptography
@@ -59,13 +59,13 @@
         src: shipping.service
         dest: /etc/systemd/system/shipping.service
 
-    - name: import shipping fine into mysql
+    - name: import shipping file into mysql
       community.mysql.mysql_db:
         state: import
         name: all
-        login host: mysql.dops.fun
+        login_host: mysql.dops.fun
         login_user: root
-        login_password: Roboshop@1
+        login_password: RoboShop@1
         target: "{{ item }}"
       loop:
       - /app/db/schema.sql
