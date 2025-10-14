@@ -56,8 +56,8 @@
 
     - name: copy shipping service file
       ansible.builtin.copy:
-      src: shipping.service
-      dest: /etc/systemd/system/shipping.service
+        src: shipping.service
+        dest: /etc/systemd/system/shipping.service
 
     - name: import shipping fine into mysql
       community.mysql.mysql_db:
