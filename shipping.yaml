@@ -13,7 +13,10 @@
     - name: install mysql python libraries
       ansible.builtin.pip:
         executable: pip3
-        name: PyMySQL
+        name: "{{ item }}"
+      loop:
+        - cryptography
+        - PyMySQL
 
     - name: remove app directory  # safe to remove if already present
       ansible.builtin.file:
