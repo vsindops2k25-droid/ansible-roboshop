@@ -10,13 +10,10 @@
       - maven
       - mysql
 
-    - name: create roboshop system user
-      ansible.builtin.user:
-        name: roboshop
-        comment: roboshop system user
-        system: true
-        shell: /sbin/nologin
-        home: /home
+    - name: install mysql python libraries
+      ansible.builtin.pip:
+        executable: pip3
+        name: PyMySQL
 
     - name: remove app directory  # safe to remove if already present
       ansible.builtin.file:
