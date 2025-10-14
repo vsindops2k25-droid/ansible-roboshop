@@ -71,3 +71,10 @@
       - /app/db/schema.sql
       - /app/db/app-user.sql
       - /app/db/master-data.sql
+
+    - name: daemon reload enable and start
+      ansible.builtinn.systemd_service:
+        name: shipping
+        enabled: true
+        state: started
+        daemon_reload: true
